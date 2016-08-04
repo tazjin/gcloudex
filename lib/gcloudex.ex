@@ -8,8 +8,8 @@ defmodule GCloudex do
   Goth retrieves this either through the configured credentials or from Google's
   metadata service if the application is running on Google Cloud Platform.
   """
-  @spec get_project_id :: binary
-  def get_project_id do
+  @spec project_id :: binary
+  def project_id do
     {:ok, project_id} = Goth.Config.get(:project_id)
     project_id
   end
